@@ -38,6 +38,18 @@ public class EmployeeService {
 		map.put("success", "Record Deleted Success");
 		return "fetch";
 	}
+
+	public String edit(int id, ModelMap map) {
+		Employee employee=dao.find(id);
+		map.put("emp", employee);
+		return "edit.jsp";
+	}
+
+	public String update(Employee employee, ModelMap map) {
+		dao.update(employee);
+		map.put("success", "Record Updated Success");
+		return "fetch";
+	}
 	
 	
 }

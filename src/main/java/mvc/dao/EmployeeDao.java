@@ -38,4 +38,10 @@ public class EmployeeDao {
 		transaction.commit();
 	}
 
+	public void update(Employee employee) {
+		transaction.begin();
+		manager.merge(employee);
+		transaction.commit();
+	}
+
 }

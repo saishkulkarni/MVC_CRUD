@@ -27,7 +27,7 @@
 			<th>${emp.mobile}</th>
 			<th>${emp.salary}</th>
 			<th><a href="delete?id=${emp.id}"><button>Delete</button></a></th>
-			<th><button>Edit</button></th>
+			<th><a href="edit?id=${emp.id}"><button>Edit</button></a></th>
 		</tr>
 		</x:forEach>
 	</table>
